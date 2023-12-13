@@ -1,0 +1,41 @@
+html, body{
+    margin: 0;
+    padding: 0;
+}
+body{
+    max-width: 70%;
+}
+a{
+    text-decoration: none;
+}
+.flex{
+    display: flex;
+}
+.header{
+
+}
+.main{
+
+}
+.footer{
+
+}
+.card{
+    display: flex;
+    border: 1px solid;
+    border-radius: 10px;
+    width: 100%;
+    padding: 15px;
+}
+.card img{
+    width: 200px;
+    margin-left: 15px;
+}
+.align-center{
+    align-items: center;
+}
+
+#logo{
+    width: 300px;
+    border-radius: 50%;
+}
