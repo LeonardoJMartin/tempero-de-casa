@@ -18,11 +18,16 @@ a{
 
 .maxwidth70{
     max-width: 70%;
-    background-color: rgb(94, 255, 0);
+    /* background-color: rgb(94, 255, 0); */
 }
 .centralizar{
-  flex-direction: row; /* row é padrão */
+  flex-direction: row;
   justify-content: center;
+}
+.space-between{
+    flex-direction: column;
+    justify-content:space-between;
+    display: flex;  
 }
 .text-center{
     text-align: center;
@@ -39,10 +44,11 @@ a{
 .footer {
     background-color: #333;
     color: #fff;
-    padding: 10px;
+    padding: 50px;
     text-align: center;
     height: 200px;
     font-size: 24px;
+    
 }
 .card{
     box-sizing: border-box;
