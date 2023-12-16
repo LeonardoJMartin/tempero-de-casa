@@ -37,6 +37,82 @@
             </div>
         </div>
     </div>
+
+    <!-- CARD PRODUTO -->
+    <div id="card-produto">
+        <div class="fechar">X</div>
+        <img src="" alt="">
+        <div>XIS</div>
+        <div>descricao</div>
+        <div>R$ 15,00</div>
+        <div>Observações</div>
+        <input type="text">
+        <div class="space-between">
+            <div class="flex">
+                <div class="mais">+</div>
+                <div class="menos">-</div>
+            </div>
+            <div>Adicionar R$ <span class="total-pedido">40,00</span></div>
+        </div>
+    </div>
+
+    <!-- FECHAR PEDIDO -->
+    <div id="fechar-pedido" class="space-between">
+        <div>
+            <img class="icone-carrinho" src="" alt="">
+            <div id="numero-carrinho"></div>
+        </div>
+        <div>Fechar Pedido</div>
+        <div>R$ <span class="total-pedido">40,00</span></div>
+    </div>
+
+    <!-- CARRINHO -->
+    <div id="carrinho">
+        <div class="space-between">
+            <div>Carrinho</div>
+            <img class="fechar" src="" alt="">
+        </div>
+        <div class="space-between">
+            <div>Itens</div>
+            <div>Preço</div>
+        </div>
+        <div class="space-between">
+            <div><span>1</span>x <span class="item-pedido"></span></div>
+            <div>R$ <span class="preco-item">40,00</span> <img id="opcoes-carrinho" alt="tres-pontos"></div>
+        </div>
+        <div>Adicionar mais itens</div>
+        <div class="space-between">
+            <div>Total <span>R$ <span class="total-pedido">40,00</span></span></div>
+            <div class="botao-proximo">Próximo</div>
+        </div>
+    </div>
+
+    <!-- ENTREGA -->
+    <div id="entrega">
+
+    </div>
+
+    <!-- FORMA DE PAGAMENTO -->
+    <div id="forma-pagamento">
+        <div>
+            <div class="fechar">X</div>
+            <div>Forma de Pagamento</div>
+            <div class="obrigatorio">OBRIGATÓRIO</div>
+        </div>
+        <div class="space-between">
+            <input type="radio" name="opcao-pagamento" id="opcao-pagamento-dinheiro">
+        </div>
+        <div class="space-between">
+            <input type="radio" name="opcao-pagamento" id="opcao-pagamento-credito">
+        </div>
+        <div class="space-between">
+            <input type="radio" name="opcao-pagamento" id="opcao-pagamento-debito">
+        </div>
+        <div class="space-between">
+            <input type="radio" name="opcao-pagamento" id="opcao-pagamento-pix">
+        </div>
+    </div>
+
     <div class="main ">
         <div class="flex centralizar">
             <div class="maxwidth70">
@@ -234,7 +310,9 @@
         <span>Tempero de casa</span>
         <div class="">
             <img id="whats" src="" alt="">
-            <a class="color-white" href="">(51) 99109-5852</a>
+            <a class="color-white" target="_blank"
+                href="https://api.whatsapp.com/send?phone=+5551991095852&text=Olá, gostaria de fazer um pedido">(51)
+                99109-5852</a>
         </div>
         <span>Endereço: Rua Dona Malvina, 43 - Santa Tereza / Porto Alegre - RS</span>
         <div>Desenvolvido por: </div>
