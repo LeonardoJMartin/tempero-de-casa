@@ -5,13 +5,21 @@ html, body{
 }
 html{
     box-sizing: border-box;
+    background-color: #f3f0f0;
 }
 li{
     list-style-type: none;
+    font-size: larger;
+    font-weight: 700;
 }
 a{
     text-decoration: none;
+    color: #333;
 }
+a:hover{
+    color: #fff;
+} 
+
 .flex{
     display: flex;
 }
@@ -25,8 +33,12 @@ a{
   justify-content: center;
 }
 .space-between{
+    justify-content: space-between;
+    display: flex;
+}
+.space-between-column{
     flex-direction: column;
-    justify-content:space-between;
+    justify-content: space-between;
     display: flex;  
 }
 .text-center{
@@ -36,7 +48,8 @@ a{
     margin: 0 auto;
 }
 .header{
-
+    background-color: #ffd300;
+    padding: 10px;
 }
 .main{
 
@@ -53,17 +66,25 @@ a{
 .card{
     box-sizing: border-box;
     display: flex;
-    border: 1px solid;
     border-radius: 10px;
     width: 47%; 
     padding: 15px;
-    margin: 12px;
-    justify-content:space-between  
+    margin: 15px;
+    justify-content:space-between;
+    box-shadow: 0 4px 8px 0 #cececf;
 }
 .card img{
     width: 200px;
     margin-left: 15px;
 }
+
+.card:hover{
+    margin-bottom: 25px;
+    margin-top: 5px;
+    box-shadow: 0 4px 8px 0 #787879;
+    
+}
+
 .text-center{
     text-align: center;
 }
@@ -76,4 +97,24 @@ a{
 .wrap{
     flex-wrap: wrap;
     display: flex;
+}
+
+.preco{
+    font-size: 20px;
+    font-weight: 700;
+    color: #2ed573;
+}
+
+h4{
+    font-size: 20px;
+    font-weight: 600;
+}
+h3{
+    margin-top: 50px;
+    margin-left: 30px;
+    font-size: 25px;
+}
+
+.color-white{
+    color: #fff;
 }
