@@ -53,15 +53,17 @@ a:hover{
 }
 .header{
     background-color: #552513;
+    
 }
 .headerpt1{
     padding: 12px;
+    
 }
 .main{
 
 }
 .footer {
-    background-color: #333;
+    background-color: #000000;
     color: #fff;
     padding: 50px;
     text-align: center;
@@ -130,6 +132,12 @@ h3{
     height: 50px;
     justify-content: center;
     display: flex;
+}
+
+.navegador{
+    position: sticky;
+    top: 0;
+    
 }
 
 .width100{
