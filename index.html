@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tempero de Casa</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="script.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -23,8 +25,26 @@
                 <div class="flex ">
                     <h1 id="tituloh1" class="margin-auto">Tempero de Casa</h1>
                 </div>
-                <div class="flex ">
-                    <p id="descricaotitulo" class="margin-auto">O amor é o principal ingrediente da casa</p>
+                <div class="flex align-items-center padding-bottom-16px ">
+                    <div class="margin-auto">
+                        <span id="descricaotitulo" class="padding-right-2px">O amor é o principal ingrediente da
+                            casa</span>
+                        <img id="icone-pimenta" src="./images/icone-pimenta.png" alt="">
+                    </div>
+                </div>
+                <div class="flex">
+                    <div class="align-items-center flex">
+                        <img id="icone-whats" class="" src="./images/icone-whats.png" alt="">
+                        <a class="social-medias padding-left-4px" target="_blank"
+                            href="https://api.whatsapp.com/send?phone=+5551991095852&text=Olá, gostaria de fazer um pedido">(51)
+                            99109-5852</a>
+                    </div>
+                    <div class="align-items-center flex padding-left-24px">
+                        <img id="icone-insta" class="" src="./images/icone-insta.png" alt="">
+                        <a class="social-medias padding-left-4px" target="_blank"
+                            href="https://www.instagram.com/temperodecasa.43">@TemperodeCasa.43</a>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -41,20 +61,21 @@
     </div>
 
     <!-- CARD PRODUTO -->
-    <div id="card-produto" hidden>
-        <div class="fechar">X</div>
-        <img src="" alt="">
-        <div>XIS</div>
-        <div>descricao</div>
-        <div>R$ 15,00</div>
-        <div>Observações</div>
-        <input type="text">
-        <div class="space-between">
-            <div class="flex">
-                <div class="mais">+</div>
-                <div class="menos">-</div>
+    <div id="card-produto" class="position-fixed-center" hidden>
+        <div class="card-central">
+            <img class="icone-fechar" src="./images/icone-fechar.png" alt="">
+            <div>XIS</div>
+            <div>descricao</div>
+            <div>R$ 15,00</div>
+            <div>Observações</div>
+            <input type="text">
+            <div class="space-between">
+                <div class="flex">
+                    <div class="mais">+</div>
+                    <div class="menos">-</div>
+                </div>
+                <div>Adicionar R$ <span class="total-pedido">40,00</span></div>
             </div>
-            <div>Adicionar R$ <span class="total-pedido">40,00</span></div>
         </div>
     </div>
 
