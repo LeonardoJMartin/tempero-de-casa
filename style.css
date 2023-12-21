@@ -110,8 +110,8 @@ h4{
     font-weight: 600;
 }
 h3{
-    margin-top: 50px;
-    margin-left: 30px;
+    padding-top: 55px;
+    padding-left: 30px;
     font-size: 25px;
 }
 
@@ -121,7 +121,7 @@ h3{
 
 .navegador{
     background-color: #000000;
-    height: 60px;
+    height: 55px;
     justify-content: center;
     display: flex;
     align-items: center;
@@ -161,11 +161,11 @@ h3{
 }
 
 #icone-whats{
-    width: 30px;  
+    width: 25px;  
 }
 
 #icone-insta{
-    width: 30px; 
+    width: 25px; 
 }
 
 .social-medias{
