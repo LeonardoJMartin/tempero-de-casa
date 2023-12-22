@@ -80,6 +80,7 @@ a:hover{
 }
 .card img{
     width: 200px;
+    
     margin-left: 15px;
 }
 
@@ -171,6 +172,14 @@ h3{
 .social-medias{
     color: #fff;
     font-size: 18px;
+}
+
+.mais, .menos{
+    background-color: #000000;
+    width: 20px;
+}
+
+.contador-produto{
 }
 
 

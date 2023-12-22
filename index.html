@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tempero de Casa</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="script.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -61,18 +61,19 @@
     </div>
 
     <!-- CARD PRODUTO -->
-    <div id="card-produto" class="position-fixed-center" hidden>
+    <div id="card-produto" class="position-fixed-center">
         <div class="card-central">
             <img class="icone-fechar" src="./images/icone-fechar.png" alt="">
             <div>XIS</div>
             <div>descricao</div>
-            <div>R$ 15,00</div>
+            <div>R$ <span class="preco-item">40,00</span></div>
             <div>Observações</div>
             <input type="text">
             <div class="space-between">
-                <div class="flex">
-                    <div class="mais">+</div>
-                    <div class="menos">-</div>
+                <div class="flex padding-top-8px">
+                    <div class="mais"><img src="plus.svg" alt=""></div>
+                    <div class="contador-produto padding-vertical-8px">1</div>
+                    <div class="menos"><img src="minus.svg" alt=""></div>
                 </div>
                 <div>Adicionar R$ <span class="total-pedido">40,00</span></div>
             </div>
@@ -147,23 +148,31 @@
                             <div class="card">
                                 <div class="informacoes">
                                     <h4>Carne de panela</h4>
-                                    <p> DESCRICAO</p>
+                                    <p>Acompanha: couve refogada, ovo frito, arroz, feijão e salada de alface e tomate.</p>
                                     <span class="preco">R$ 17,00</span>
                                 </div>
-                                <img src="./images/txfrango.jpeg" alt="">
+                                <img src="./images/carne-panela.png" alt="">
+                            </div>
+                            <div class="card">
+                                <div class="informacoes">
+                                    <h4>Iscas de carne suína com batata rústica</h4>
+                                    <p>Acompanha: arroz, feijão e salada de alface e tomate.</p>
+                                    <span class="preco">R$ 17,00</span>
+                                </div>
+                                <img src="./images/carne-panela.png" alt="">
                             </div>
                             <div class="card">
                                 <div class="informacoes">
                                     <h4>Iscas de carne bovina com molho</h4>
-                                    <p> DESCRICAO</p>
+                                    <p>Acompanha: batata rústica, arroz, feijão, salada de alface e tomate</p>
                                     <span class="preco">R$ 17,00</span>
                                 </div>
                                 <img src="./images/txfrango.jpeg" alt="">
                             </div>
                             <div class="card">
                                 <div class="informacoes">
-                                    <h4>Sobrecoxa com molho</h4>
-                                    <p> DESCRICAO</p>
+                                    <h4>Sobrecoxa(sem pele) com molho</h4>
+                                    <p>Acompanha: purê de batatas, arroz, feijão e salada de alface e tomate.</p>
                                     <span class="preco">R$ 17,00</span>
                                 </div>
                                 <img src="./images/txfrango.jpeg" alt="">
@@ -178,8 +187,8 @@
                             </div>
                             <div class="card">
                                 <div class="informacoes">
-                                    <h4>Panqueca de frango com molho</h4>
-                                    <p> DESCRICAO</p>
+                                    <h4>Panqueca de frango com molho branco</h4>
+                                    <p>Acompanha: arroz, feijão e salada de alface e tomate</p>
                                     <span class="preco">R$ 17,00</span>
                                 </div>
                                 <img src="./images/txfrango.jpeg" alt="">
@@ -187,7 +196,7 @@
                             <div class="card">
                                 <div class="informacoes">
                                     <h4>Chuleta de gado acebolada</h4>
-                                    <p> DESCRICAO</p>
+                                    <p>Acompanha: batata rústica, ovo frito, arroz, feijão e salada de alface e tomate</p>
                                     <span class="preco">R$ 17,00</span>
                                 </div>
                                 <img src="./images/txfrango.jpeg" alt="">
@@ -195,7 +204,15 @@
                             <div class="card">
                                 <div class="informacoes">
                                     <h4>Strogonoff de frango</h4>
-                                    <p> DESCRICAO</p>
+                                    <p>Acompanha: batata palha, arroz, feijão e salada de alface e tomate</p>
+                                    <span class="preco">R$ 17,00</span>
+                                </div>
+                                <img src="./images/txfrango.jpeg" alt="">
+                            </div>
+                            <div class="card">
+                                <div class="informacoes">
+                                    <h4>Strogonoff de carne</h4>
+                                    <p>Acompanha: batata palha, arroz, feijão e salada de alface e tomate</p>
                                     <span class="preco">R$ 17,00</span>
                                 </div>
                                 <img src="./images/txfrango.jpeg" alt="">
@@ -211,10 +228,18 @@
                             <div class="card">
                                 <div class="informacoes">
                                     <h4>Almôndegas com molho</h4>
-                                    <p> DESCRICAO</p>
+                                    <p>Acompanha: massa alho e óleo, arroz, feijão e salada de alface e tomate</p>
                                     <span class="preco">R$ 17,00</span>
                                 </div>
-                                <img src="./images/txfrango.jpeg" alt="">
+                                <img src="./images/almondegas.png" alt="">
+                            </div>
+                            <div class="card">
+                                <div class="informacoes">
+                                    <h4>Frango frito e purê de batatas</h4>
+                                    <p>Acompanha: arroz, feijão e salada de alface e tomate</p>
+                                    <span class="preco">R$ 17,00</span>
+                                </div>
+                                <img src="./images/almondegas.png" alt="">
                             </div>
                         </div>
                     </div>
@@ -225,24 +250,24 @@
                             <div class="card">
                                 <div class="informacoes">
                                     <h4>Calabresa acebolada</h4>
-                                    <p> DESCRICAO</p>
-                                    <span class="preco">R$ 17,00</span>
+                                    <p>Acompanha: batata frita, ovo frito, arroz, feijão, salada de alface e tomate</p>
+                                    <span class="preco">R$ 18,00</span>
                                 </div>
                                 <img src="./images/txfrango.jpeg" alt="">
                             </div>
                             <div class="card">
                                 <div class="informacoes">
                                     <h4>Frango à milanesa</h4>
-                                    <p> DESCRICAO</p>
-                                    <span class="preco">R$ 17,00</span>
+                                    <p>Acompanha: batata frita, ovo frito, arroz, feijão, salada de alface e tomate</p>
+                                    <span class="preco">R$ 20,00</span>
                                 </div>
                                 <img src="./images/txfrango.jpeg" alt="">
                             </div>
                             <div class="card">
                                 <div class="informacoes">
                                     <h4>Carne à milanesa</h4>
-                                    <p> DESCRICAO</p>
-                                    <span class="preco">R$ 17,00</span>
+                                    <p>Acompanha: batata frita, ovo frito, arroz, feijão, salada de alface e tomate</p>
+                                    <span class="preco">R$ 20,00</span>
                                 </div>
                                 <img src="./images/txfrango.jpeg" alt="">
                             </div>
