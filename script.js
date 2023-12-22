@@ -1,3 +1,4 @@
+var card = {};
 var numeroCliente = 0;
 var nomeCliente = "";
 var enderecoCliente = "";
@@ -9,11 +10,9 @@ var contadorProduto = 0;
 $(document).ready(function () {
     $('.card').click(function () {
         resetaContadorProduto();
-        let preco = $(this).find('.preco').text(); // pega o texto do preço do card clicado
-        nomeProduto = $(this).find('h4').text();
-        descricaoProduto = $(this).find('p').text();
-        preencheNomeDescricao();
-        convertePrecoProduto(preco); // converte esse preco para float e armazena na variavel global precoProduto
+        card = $(this);
+        preencheNomeDescricao(card); // pega o titulo e a descricao do produto clicado e preenche o card
+        convertePrecoProduto(card); //pega o preco e converte para float e armazena na variavel global precoProduto
         $('.preco-item').text(precoProduto);  // preenche o preco da unidade do produto 
         calculaTotalPedido(); // calcula e preenche o total do pedido
         $('#card-produto').show();
@@ -36,7 +35,8 @@ $(document).ready(function () {
         }
     });
 
-    function convertePrecoProduto(valor) {
+    function convertePrecoProduto(card) {
+        let valor = card.find('.preco').text();
         precoProduto = parseFloat(valor.replace(',', '.')); // transforma a virgula em ponto, e depois converte a string em float;
     };
     
@@ -54,9 +54,9 @@ $(document).ready(function () {
         contadorProduto = 1;
     }
     
-    function preencheNomeDescricao(){
-        $('.nome-item').text(nomeProduto);
-        $('.descricao-item').text(descricaoProduto);
+    function preencheNomeDescricao(card){
+        $('.nome-item').text($(card).find('h4').text());
+        $('.descricao-item').text($(card).find('p').text());
     }
 
 });
