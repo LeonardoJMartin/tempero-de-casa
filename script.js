@@ -38,22 +38,13 @@ $(document).ready(function () {
             calculatotalPedidoTemp();
         }
     });
-    const arr = undefined;
 
-    // Providing an empty array fallback
-    const arrLength = (arr ?? []).length;
-
-    console.log(arrLength); // 0
     $('.adicionar-carrinho').click(function () {
-        produtoAdicionadoCarrinho[produtoAdicionadoCarrinho.length] = {
-            nomeProduto: nomeProdutoTemp,
-            descricaoProduto: descricaoProdutoTemp,
-            precoProduto: precoProdutoTemp,
-            totalPedido: totalPedidoTemp,
-            contadorProduto: contadorProdutoTemp
-        };
-
+        guardaInfoProdutoAdd();
+        $('.numero-produtos').text(produtoAdicionadoCarrinho.length == 1 ? produtoAdicionadoCarrinho.length + " item" : produtoAdicionadoCarrinho.length + " itens");
         $('#card-produto').hide();
+        $('.total-todos-pedidos').text(somaTotalTudo());
+        $('#fechar-pedido').show();
     });
 
     function convertePrecoProduto(card) {
@@ -73,7 +64,7 @@ $(document).ready(function () {
     function resetaContadorProduto() {
         $('.contador-produto').text(1);
         contadorProdutoTemp = 1;
-    }
+    };
 
     function preencheNomeDescricao(card) {
         nomeProdutoTemp = $(card).find('h4').text();
@@ -81,6 +72,24 @@ $(document).ready(function () {
 
         descricaoProdutoTemp = $(card).find('p').text();
         $('.descricao-item').text(descricaoProdutoTemp);
+    };
+
+    function guardaInfoProdutoAdd() {
+        produtoAdicionadoCarrinho[produtoAdicionadoCarrinho.length] = {
+            nomeProduto: nomeProdutoTemp,
+            descricaoProduto: descricaoProdutoTemp,
+            precoProduto: precoProdutoTemp,
+            totalPedidoProduto: totalPedidoTemp,
+            contadorProduto: contadorProdutoTemp
+        };
+    };
+
+    function somaTotalTudo() {
+        let soma = 0;
+        for(let i = 0; i < produtoAdicionadoCarrinho.length; i++){
+            soma += produtoAdicionadoCarrinho[i].totalPedidoProduto;
+        }
+        return soma;
     }
 
 });
