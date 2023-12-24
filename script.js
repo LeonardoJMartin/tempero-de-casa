@@ -9,54 +9,76 @@ var totalPedidoTemp = 0;
 var contadorProdutoTemp = 0;
 var produtoAdicionadoCarrinho = [];
 $(document).ready(function () {
+    //EVENTOS
     $('.card').click(function () {
-        resetaContadorProduto();
         card = $(this);
-        preencheNomeDescricao(card); // pega o titulo e a descricao do produto clicado e preenche o card
-        convertePrecoProduto(card); //pega o preco e converte para float e armazena na variavel global precoProduto
-        $('.preco-item').text(precoProdutoTemp);  // preenche o preco da unidade do produto 
-        calculatotalPedidoTemp(); // calcula e preenche o total do pedido
-        $('#card-produto').show();
+        controlaCard();
     });
 
     $('.fechar-carrinho').click(function () {
         let idParaOcultar = $(this).closest('[id]').attr("id");
-
         if (idParaOcultar) {
             $("#" + idParaOcultar).hide();
         }
     });
 
     $('.mais').click(function () {
+        controlaBotaoMais();
+    });
+
+    $('.menos').click(function () {
+        controlaBotaoMenos();
+    });
+
+    $('.adicionar-carrinho').click(function () {
+        controlaAdicionarCarrinho();
+    });
+
+    $('#fechar-pedido').click(function () {
+        controlaFecharPedido();
+    });
+
+    //CONTROLA OBJETOS
+    function controlaCard() {
+        resetaContadorProduto();
+        preencheNomeDescricao(card); // pega o titulo e a descricao do produto clicado e preenche o card
+        convertePrecoProduto(card); //pega o preco e converte para float e armazena na variavel global precoProduto
+        $('.preco-item').text(precoProdutoTemp);  // preenche o preco da unidade do produto 
+        calculatotalPedidoTemp(); // calcula e preenche o total do pedido
+        $('#card-produto').show();
+    };
+
+    function controlaAdicionarCarrinho() {
+        guardaInfoProdutoAdd();
+        $('.numero-produtos').text(somaQtdContadorTudo() == 1 ? somaQtdContadorTudo() + " item" : somaQtdContadorTudo() + " itens");
+        $('#card-produto').hide();
+        $('.total-pedido').text(somaTotalTudo());
+        $('#fechar-pedido').show();
+    };
+
+    function controlaFecharPedido() {
+        verificaProdutosAdd();
+        $('.total-pedido').text(somaTotalTudo().toLocaleString('pt-br', { minimumFractionDigits: 2 }));
+        $('#carrinho').show();
+    };
+
+    function controlaBotaoMais() {
         verificaContadorProduto();
         contadorProdutoTemp++;
         $('.contador-produto').text(contadorProdutoTemp);
         calculatotalPedidoTemp();
-    });
+    };
 
-    $('.menos').click(function () {
+    function controlaBotaoMenos() {
         verificaContadorProduto();
         if (contadorProdutoTemp > 1) {
             contadorProdutoTemp--;
             $('.contador-produto').text(contadorProdutoTemp);
             calculatotalPedidoTemp();
         }
-    });
+    };
 
-    $('.adicionar-carrinho').click(function () {
-        guardaInfoProdutoAdd();
-        $('.numero-produtos').text(somaQtdContadorTudo() == 1 ? somaQtdContadorTudo() + " item" : somaQtdContadorTudo() + " itens");
-        $('#card-produto').hide();
-        $('.total-pedido').text(somaTotalTudo());
-        $('#fechar-pedido').show();
-    });
-
-    $('#fechar-pedido').click(function () {
-        verificaProdutosAdd();
-        $('.total-pedido').text(somaTotalTudo().toLocaleString('pt-br', { minimumFractionDigits: 2 }));
-        $('#carrinho').show();
-    });
-
+    //FUNÇÕES AUXILIARES
     function convertePrecoProduto(card) {
         let valor = card.find('.preco').text();
         precoProdutoTemp = parseFloat(valor.replace(',', '.')); // transforma a virgula em ponto, e depois converte a string em float;
@@ -113,14 +135,14 @@ $(document).ready(function () {
 
     function verificaProdutosAdd() {
         let htmlContent = ''; // Inicializa uma string vazia para acumular o conteúdo HTML
-    
+
         for (let i = 0; i < produtoAdicionadoCarrinho.length; i++) {
             htmlContent += preencheProdutosAdd(produtoAdicionadoCarrinho[i]);
         }
-    
+
         $('.lista-produtos-carrinho').html(htmlContent); // Define o conteúdo HTML uma vez após o loop
     };
-    
+
     function preencheProdutosAdd(produto) {
         return '<div class="space-between"><span> ' +
             produto.contadorProduto + 'x  •  ' +
