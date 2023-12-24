@@ -20,7 +20,11 @@ $(document).ready(function () {
     });
 
     $('.icone-fechar').click(function () {
-        $('#card-produto').hide();
+        let idParaOcultar = $(this).closest('[id]').attr("id");
+
+        if (idParaOcultar) {
+            $("#" + idParaOcultar).hide();
+        }
     });
 
     $('.mais').click(function () {
@@ -41,10 +45,14 @@ $(document).ready(function () {
 
     $('.adicionar-carrinho').click(function () {
         guardaInfoProdutoAdd();
-        $('.numero-produtos').text(produtoAdicionadoCarrinho.length == 1 ? produtoAdicionadoCarrinho.length + " item" : produtoAdicionadoCarrinho.length + " itens");
+        $('.numero-produtos').text(somaQtdContadorTudo() == 1 ? somaQtdContadorTudo() + " item" : somaQtdContadorTudo() + " itens");
         $('#card-produto').hide();
         $('.total-todos-pedidos').text(somaTotalTudo());
         $('#fechar-pedido').show();
+    });
+
+    $('#fechar-pedido').click(function () {
+        $('#carrinho').show();
     });
 
     function convertePrecoProduto(card) {
@@ -86,8 +94,17 @@ $(document).ready(function () {
 
     function somaTotalTudo() {
         let soma = 0;
-        for(let i = 0; i < produtoAdicionadoCarrinho.length; i++){
+        for (let i = 0; i < produtoAdicionadoCarrinho.length; i++) {
             soma += produtoAdicionadoCarrinho[i].totalPedidoProduto;
+        }
+        soma = soma.toLocaleString('pt-br', { minimumFractionDigits: 2 });
+        return soma;
+    };
+
+    function somaQtdContadorTudo() {
+        let soma = 0;
+        for (let i = 0; i < produtoAdicionadoCarrinho.length; i++) {
+            soma += produtoAdicionadoCarrinho[i].contadorProduto;
         }
         return soma;
     }
