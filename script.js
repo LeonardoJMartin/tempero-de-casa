@@ -19,7 +19,7 @@ $(document).ready(function () {
         $('#card-produto').show();
     });
 
-    $('.icone-fechar').click(function () {
+    $('.fechar-carrinho').click(function () {
         let idParaOcultar = $(this).closest('[id]').attr("id");
 
         if (idParaOcultar) {
@@ -47,11 +47,13 @@ $(document).ready(function () {
         guardaInfoProdutoAdd();
         $('.numero-produtos').text(somaQtdContadorTudo() == 1 ? somaQtdContadorTudo() + " item" : somaQtdContadorTudo() + " itens");
         $('#card-produto').hide();
-        $('.total-todos-pedidos').text(somaTotalTudo());
+        $('.total-pedido').text(somaTotalTudo());
         $('#fechar-pedido').show();
     });
 
     $('#fechar-pedido').click(function () {
+        verificaProdutosAdd();
+        $('.total-pedido').text(somaTotalTudo().toLocaleString('pt-br', { minimumFractionDigits: 2 }));
         $('#carrinho').show();
     });
 
@@ -62,7 +64,7 @@ $(document).ready(function () {
 
     function calculatotalPedidoTemp() {
         totalPedidoTemp = contadorProdutoTemp * precoProdutoTemp;
-        $('.total-pedido').text(totalPedidoTemp);
+        $('.total-produto').text(totalPedidoTemp);
     };
 
     function verificaContadorProduto() {
@@ -107,6 +109,30 @@ $(document).ready(function () {
             soma += produtoAdicionadoCarrinho[i].contadorProduto;
         }
         return soma;
-    }
+    };
+
+    function verificaProdutosAdd() {
+        let htmlContent = ''; // Inicializa uma string vazia para acumular o conteúdo HTML
+    
+        for (let i = 0; i < produtoAdicionadoCarrinho.length; i++) {
+            htmlContent += preencheProdutosAdd(produtoAdicionadoCarrinho[i]);
+        }
+    
+        $('.lista-produtos-carrinho').html(htmlContent); // Define o conteúdo HTML uma vez após o loop
+    };
+    
+    function preencheProdutosAdd(produto) {
+        return '<div class="space-between"><span> ' +
+            produto.contadorProduto + 'x  •  ' +
+            produto.nomeProduto +
+            '</span> ' +
+            '<span> ' +
+            (produto.contadorProduto * produto.precoProduto).toLocaleString('pt-br', { style: 'currency', currency: 'BRL' }) +
+            '<img id="opcoes-carrinho" alt="tres-pontos">' +
+            '</span></div> ';
+    };
 
 });
+
+//.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'}) formata para brl com R$
+//.toLocaleString('pt-br', { minimumFractionDigits: 2 }); formata para brl sem R$
