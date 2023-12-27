@@ -183,11 +183,14 @@ h3{
     height: 20px;
 }
 
-.adicionar-carrinho{
+.buttons{
     background-color: #000;
     border-radius: 8px;
     height: 35px;
     color: #fff;
+    min-width: 80px;
+    justify-content: center
+
 }
 
 .contador-produto{

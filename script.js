@@ -30,7 +30,7 @@ $(document).ready(function () {
         controlaBotaoMenos();
     });
 
-    $('.adicionar-carrinho').click(function () {
+    $('#adicionar-carrinho').click(function () {
         controlaAdicionarCarrinho();
     });
 
