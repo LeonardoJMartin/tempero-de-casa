@@ -86,7 +86,7 @@ $(document).ready(function () {
 
     function calculatotalPedidoTemp() {
         totalPedidoTemp = contadorProdutoTemp * precoProdutoTemp;
-        $('.total-produto').text(totalPedidoTemp);
+        $('.total-produto').text(totalPedidoTemp.toLocaleString('pt-br', { minimumFractionDigits: 2 }));
     };
 
     function verificaContadorProduto() {
@@ -158,3 +158,29 @@ $(document).ready(function () {
 
 //.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'}) formata para brl com R$
 //.toLocaleString('pt-br', { minimumFractionDigits: 2 }); formata para brl sem R$
+
+/*
+siblings():
+Descrição: Retorna todos os irmãos do elemento especificado.
+Uso típico: Útil quando você precisa interagir com elementos que compartilham o mesmo pai.
+Exemplo:
+var siblings = $(element).siblings();
+
+find():
+Descrição: Retorna todos os descendentes que correspondem ao seletor especificado, dentro do conjunto de elementos.
+Uso típico: Útil para buscar elementos específicos dentro de um elemento pai.
+Exemplo:
+var descendants = $(element).find('.classe-desejada');
+
+closest():
+Descrição: Retorna o ancestral mais próximo que corresponde ao seletor especificado.
+Uso típico: Útil para navegar pela árvore do DOM e encontrar o ancestral mais próximo que atenda a determinados critérios.
+Exemplo:
+var closestAncestor = $(element).closest('.classe-desejada');
+
+Em resumo, 
+siblings() é usado para encontrar irmãos de um elemento, 
+find() é usado para localizar descendentes dentro de um elemento, 
+closest() é usado para encontrar o ancestral mais próximo que corresponde a um seletor específico. 
+
+*/
