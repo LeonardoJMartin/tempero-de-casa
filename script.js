@@ -50,7 +50,7 @@ $(document).ready(function () {
 
     function controlaAdicionarCarrinho() {
         guardaInfoProdutoAdd();
-        $('.numero-produtos').text(somaQtdContadorTudo() == 1 ? somaQtdContadorTudo() + " item" : somaQtdContadorTudo() + " itens");
+        $('.numero-produtos').text(somaQtdContadorTudo() == 1 ? somaQtdContadorTudo() + " Item" : somaQtdContadorTudo() + " Itens");
         $('#card-produto').hide();
         $('.total-pedido').text(somaTotalTudo());
         $('#fechar-pedido').show();

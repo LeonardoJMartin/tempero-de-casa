@@ -18,7 +18,7 @@
 <body>
     <div class="header">
         <div class="flex centralizar headerpt1">
-            <div class="maxwidth70">
+            <div class="maxwidth80">
                 <div class="flex ">
                     <img id="logo" class="margin-auto" src="./images/logo.jpg" alt="">
                 </div>
@@ -50,7 +50,7 @@
         </div>
     </div>
     <div class="navegador">
-        <ul class="maxwidth70 space-between width100">
+        <ul class="maxwidth80 space-between width100">
             <li><a href="#prato-dia">Prato do dia</a></li>
             <li><a href="#alaminutas">Alaminutas</a></li>
             <li><a href="#porcoes">Porções</a></li>
@@ -61,7 +61,7 @@
     </div>
 
     <!-- CARD PRODUTO -->
-    <div id="card-produto" class="position-fixed-center" hidden>
+    <div id="card-produto" class="position-fixed-center align-items-center" hidden>
         <div class="card-central">
             <img class="icone-fechar" src="./images/icone-fechar.png" alt="">
             <div class="nome-item">XIS</div>
@@ -72,7 +72,7 @@
             <div class="space-between">
                 <div class="flex padding-top-8px">
                     <img class="menos" src="./images/minus.svg" alt="">
-                    <div class="contador-produto padding-vertical-8px">1</div>                 
+                    <div class="contador-produto padding-vertical-8px">1</div>
                     <img class="mais" src="./images/plus.svg" alt="">
                 </div>
                 <div class="adicionar-carrinho">Adicionar <span>R$ <span class="total-produto">0,00</span></span></div>
@@ -81,13 +81,15 @@
     </div>
 
     <!-- FECHAR PEDIDO -->
-    <div id="fechar-pedido" class="space-between" hidden>
-        <div>
-            <img class="icone-carrinho" src="" alt="">
-            <div class="numero-produtos"></div>
+    <div id="fechar-pedido" hidden>
+        <div class="space-between align-items-center height-100 padding-vertical-48px" >
+            <div class="flex align-items-center">
+                <img class="icone-carrinho padding-right-4px" src="./images/icons8-carrinho-48.png" alt="">
+                <span class="numero-produtos"></span>
+            </div>
+            <div>Fechar Pedido</div>
+            <div>R$ <span class="total-pedido">0,00</span></div>
         </div>
-        <div>Fechar Pedido</div>
-        <div>R$ <span class="total-pedido">0,00</span></div>
     </div>
 
     <!-- CARRINHO -->
@@ -138,7 +140,7 @@
 
     <div class="main ">
         <div class="flex centralizar">
-            <div class="maxwidth70">
+            <div class="maxwidth80">
                 <div class="">
                     <div id="prato-dia">
                         <!-- PRATOS DO DIA -->
@@ -147,7 +149,8 @@
                             <div class="card">
                                 <div class="informacoes">
                                     <h4>Carne de panela</h4>
-                                    <p>Acompanha: couve refogada, ovo frito, arroz, feijão e salada de alface e tomate.</p>
+                                    <p>Acompanha: couve refogada, ovo frito, arroz, feijão e salada de alface e tomate.
+                                    </p>
                                     <span class="preco-estilo">R$ <span class="preco">17,00</span></span>
                                 </div>
                                 <img src="./images/carne-panela.png" alt="">
@@ -195,7 +198,8 @@
                             <div class="card">
                                 <div class="informacoes">
                                     <h4>Chuleta de gado acebolada</h4>
-                                    <p>Acompanha: batata rústica, ovo frito, arroz, feijão e salada de alface e tomate</p>
+                                    <p>Acompanha: batata rústica, ovo frito, arroz, feijão e salada de alface e tomate
+                                    </p>
                                     <span class="preco-estilo">R$ <span class="preco">17,00</span></span>
                                 </div>
                                 <img src="./images/txfrango.jpeg" alt="">
