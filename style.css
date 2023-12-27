@@ -65,6 +65,7 @@ a:hover{
     
 }
 .card{
+    cursor: pointer;
     background-color: #fff;
     box-sizing: border-box;
     display: flex;
@@ -154,6 +155,7 @@ h3{
 }
 
 .icone-fechar{
+    cursor: pointer;
     width: 30px;
 }
 
@@ -179,11 +181,13 @@ h3{
 }
 
 .mais, .menos{
+    cursor: pointer;
     width: 20px;
     height: 20px;
 }
 
 .buttons{
+    cursor: pointer;
     background-color: #000;
     border-radius: 8px;
     height: 35px;
@@ -206,6 +210,7 @@ h3{
     font-size: 22px;
     font-weight: 700;
     border: 1px solid #552513;
+    cursor: pointer;
 }
 
 .flex{
