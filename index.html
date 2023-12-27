@@ -75,14 +75,15 @@
                     <div class="contador-produto padding-vertical-8px">1</div>
                     <img class="mais" src="./images/plus.svg" alt="">
                 </div>
-                <div class="flex align-items-center adicionar-carrinho padding-horizontal-4px padding-vertical-8px">Adicionar R$ <span class="total-produto">0,00</span></div>
+                <div class="flex align-items-center adicionar-carrinho padding-horizontal-4px padding-vertical-8px">
+                    Adicionar R$ <span class="total-produto">0,00</span></div>
             </div>
         </div>
     </div>
 
     <!-- FECHAR PEDIDO -->
     <div id="fechar-pedido" hidden>
-        <div class="space-between align-items-center height-100 padding-vertical-48px" >
+        <div class="space-between align-items-center height-100 padding-vertical-48px">
             <div class="flex align-items-center">
                 <img class="icone-carrinho padding-right-4px" src="./images/icons8-carrinho-48.png" alt="">
                 <span class="numero-produtos"></span>
@@ -93,22 +94,24 @@
     </div>
 
     <!-- CARRINHO -->
-    <div id="carrinho" hidden>
-        <div class="space-between">
-            <img class="icone-fechar fechar-carrinho" src="./images/icone-fechar.png" alt="">
-            <div>Carrinho</div>
-        </div>
-        <div class="space-between">
-            <div>Itens</div>
-            <div>Preço</div>
-        </div>
-        <div class="lista-produtos-carrinho">
+    <div id="carrinho" class="position-fixed-center align-items-center" hidden>
+        <div class="card-central padding-horizontal-16px padding-vertical-16px">
+            <div class="space-between ">
+                <img class="icone-fechar fechar-carrinho" src="./images/icone-fechar.png" alt="">
+                <div>Carrinho</div>
+            </div>
+            <div class="space-between">
+                <div>Itens</div>
+                <div>Preço</div>
+            </div>
+            <div class="lista-produtos-carrinho">
 
-        </div>
-        <div class="fechar-carrinho">Adicionar mais itens</div>
-        <div class="space-between">
-            <div>Total <span>R$ <span class="total-pedido">40,00</span></span></div>
-            <div class="botao-proximo">Próximo</div>
+            </div>
+            <div class="fechar-carrinho">Adicionar mais itens</div>
+            <div class="space-between">
+                <div>Total <span>R$ <span class="total-pedido">40,00</span></span></div>
+                <div class="botao-proximo">Próximo</div>
+            </div>
         </div>
     </div>
 
