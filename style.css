@@ -1,60 +1,72 @@
-html, body{
+html,
+body {
     margin: 0;
     padding: 0;
     font-family: 'Roboto', Arial, Helvetica, sans-serif;
 }
-html{
+
+html {
     box-sizing: border-box;
     background-color: #f3f0f0;
 }
-li{
+
+li {
     list-style-type: none;
     font-size: larger;
-    font-weight: 700;  
-    font-size: 22px; 
+    font-weight: 700;
+    font-size: 22px;
 }
-a{
+
+a {
     text-decoration: none;
     color: #333;
 }
-li a{
+
+li a {
     color: #ffffff;
 }
-a:hover{
-    color: #fcfca3;
-} 
 
-.maxwidth80{
+a:hover {
+    color: #fcfca3;
+}
+
+.maxwidth80 {
     max-width: 80%;
     /* background-color: rgb(94, 255, 0); */
 }
-.centralizar{
-  flex-direction: row;
-  justify-content: center;
+
+.centralizar {
+    flex-direction: row;
+    justify-content: center;
 }
-.space-between{
+
+.space-between {
     justify-content: space-between;
     display: flex;
 }
-.space-between-column{
+
+.space-between-column {
     flex-direction: column;
     justify-content: space-between;
-    display: flex;  
+    display: flex;
 }
-.margin-auto{
+
+.margin-auto {
     margin: 0 auto;
 }
-.header{
+
+.header {
     background-color: #552513;
-    
-}
-.headerpt1{
-    padding: 12px;
-    
-}
-.main{
 
 }
+
+.headerpt1 {
+    padding: 12px;
+
+}
+
+.main {}
+
 .footer {
     background-color: #552513;
     color: #fff;
@@ -62,66 +74,70 @@ a:hover{
     text-align: center;
     height: 150px;
     font-size: 20px;
-    
+
 }
-.card{
+
+.card {
     cursor: pointer;
     background-color: #fff;
     box-sizing: border-box;
     display: flex;
     border-radius: 10px;
-    width: 47%; 
-    padding: 15px;
+    width: 47%;
+    padding: 25px;
     margin: 15px;
-    justify-content:space-between;
+    justify-content: space-between;
     box-shadow: 0 4px 8px 0 #cececf;
     min-width: 300px;
     max-width: 800px;
     min-height: 200px;
 }
-.card img{
+
+.card img {
     width: 200px;
     margin-left: 15px;
 }
 
-.card:hover{
+.card:hover {
     margin-bottom: 25px;
     margin-top: 5px;
     box-shadow: 0 4px 8px 0 #787879;
-    
+
 }
 
-#logo{
-    width: 200px;
+#logo {
+    width: 170px;
     border-radius: 50%;
 }
-.wrap{
+
+.wrap {
     flex-wrap: wrap;
     display: flex;
 }
 
-.preco-estilo{
+.preco-estilo {
     font-size: 20px;
     font-weight: 700;
     color: #2ed573;
 }
 
-h4{
-    font-size: 20px;
-    font-weight: 600;
-}
-h3{
+h3 {
     margin-top: 10px;
     padding-top: 55px;
     padding-left: 30px;
     font-size: 25px;
 }
 
-.color-white{
+.titulo-card {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.color-white {
     color: #fff;
 }
 
-.navegador{
+.navegador {
     background-color: #000000;
     height: 50px;
     justify-content: center;
@@ -131,21 +147,21 @@ h3{
     top: 0;
 }
 
-.width100{
+.width100 {
     width: 100%;
 }
 
-#tituloh1{
+#tituloh1 {
     padding: 8px 0;
     color: #ffffff;
 }
 
-#descricaotitulo{
+#descricaotitulo {
     color: #ffffff;
     font-size: 18px;
 }
 
-.card-central{
+.card-central {
     border-radius: 10px;
     background-color: #fff;
     box-shadow: 0 4px 8px 0 #cececf;
@@ -154,39 +170,40 @@ h3{
     max-width: 1100px;
 }
 
-.icone-fechar{
+.icone-fechar {
     cursor: pointer;
     width: 30px;
 }
 
-.icone-carrinho{
+.icone-carrinho {
     width: 30px;
 }
 
-#icone-pimenta{
+#icone-pimenta {
     width: 25px;
 }
 
-#icone-whats{
-    width: 25px;  
+#icone-whats {
+    width: 25px;
 }
 
-#icone-insta{
-    width: 25px; 
+#icone-insta {
+    width: 25px;
 }
 
-.social-medias{
+.social-medias {
     color: #fff;
     font-size: 18px;
 }
 
-.mais, .menos{
+.mais,
+.menos {
     cursor: pointer;
     width: 20px;
     height: 20px;
 }
 
-.buttons{
+.buttons {
     cursor: pointer;
     background-color: #000;
     border-radius: 8px;
@@ -194,13 +211,15 @@ h3{
     color: #fff;
     min-width: 80px;
     justify-content: center
-
 }
 
-.contador-produto{
+.fechar-carrinho {
+    cursor: pointer;
 }
 
-#fechar-pedido{
+.contador-produto {}
+
+#fechar-pedido {
     width: 100%;
     height: 55px;
     position: fixed;
@@ -213,251 +232,315 @@ h3{
     cursor: pointer;
 }
 
-.flex{
+.flex {
     display: flex;
 }
-.align-items-center{
-  align-items: center;  
+
+.alinhar-centro-horizontal {
+    display: flex;
+    align-items: center;
 }
-.position-fixed-center{
+
+.alinhar-centro-vertical {
+    display: flex;
+    justify-content: center
+}
+
+
+
+.position-fixed-center {
     position: fixed;
-    top:  calc(50% - 250px);
+    top: calc(50% - 250px);
     left: calc(50% - 400px);
 }
-.text-center{
+
+.text-center {
     text-align: center;
 }
 
-.height-100{
-height: 100%;
+.height-100 {
+    height: 100%;
 }
+
 /* MARGINS */
 
-.margin-left-2px{
+.margin-left-2px {
     margin-left: 2px;
 }
-.margin-left-4px{
+
+.margin-left-4px {
     margin-left: 4px;
 }
-.margin-left-8px{
+
+.margin-left-8px {
     margin-left: 8px;
 }
-.margin-left-16px{
+
+.margin-left-16px {
     margin-left: 16px;
 }
-.margin-left-24px{
+
+.margin-left-24px {
     margin-left: 24px;
 }
 
 
-.margin-right-2px{
+.margin-right-2px {
     margin-right: 2px;
 }
-.margin-right-4px{
+
+.margin-right-4px {
     margin-right: 4px;
 }
-.margin-right-8px{
+
+.margin-right-8px {
     margin-right: 8px;
 }
-.margin-right-16px{
+
+.margin-right-16px {
     margin-right: 16px;
 }
-.margin-right-24px{
+
+.margin-right-24px {
     margin-right: 24px;
 }
 
 
-.margin-top-2px{
+.margin-top-2px {
     margin-top: 2px;
 }
-.margin-top-4px{
+
+.margin-top-4px {
     margin-top: 4px;
 }
-.margin-top-8px{
+
+.margin-top-8px {
     margin-top: 8px;
 }
-.margin-top-16px{
+
+.margin-top-16px {
     margin-top: 16px;
 }
-.margin-top-24px{
+
+.margin-top-24px {
     margin-top: 24px;
 }
 
 
-.margin-bottom-2px{
+.margin-bottom-2px {
     margin-bottom: 2px;
 }
-.margin-bottom-4px{
+
+.margin-bottom-4px {
     margin-bottom: 4px;
 }
-.margin-bottom-8px{
+
+.margin-bottom-8px {
     margin-bottom: 8px;
 }
-.margin-bottom-16px{
+
+.margin-bottom-16px {
     margin-bottom: 16px;
 }
-.margin-bottom-24px{
+
+.margin-bottom-24px {
     margin-bottom: 24px;
 }
 
 
-.margin-horizontal-2px{
+.margin-horizontal-2px {
     margin-bottom: 2px;
     margin-top: 2px;
 }
-.margin-horizontal-4px{
+
+.margin-horizontal-4px {
     margin-bottom: 4px;
     margin-top: 4px;
 }
-.margin-horizontal-8px{
+
+.margin-horizontal-8px {
     margin-bottom: 8px;
     margin-top: 8px;
 }
-.margin-horizontal-16px{
+
+.margin-horizontal-16px {
     margin-bottom: 16px;
     margin-top: 16px;
 }
-.margin-horizontal-24px{
+
+.margin-horizontal-24px {
     margin-bottom: 24px;
     margin-top: 24px;
 }
 
 
 
-.margin-vertical-2px{
+.margin-vertical-2px {
     margin-right: 2px;
     margin-left: 2px;
 }
-.margin-vertical-4px{
+
+.margin-vertical-4px {
     margin-right: 4px;
     margin-left: 4px;
 }
-.margin-vertical-8px{
+
+.margin-vertical-8px {
     margin-right: 8px;
     margin-left: 8px;
 }
-.margin-vertical-16px{
+
+.margin-vertical-16px {
     margin-right: 16px;
     margin-left: 16px;
 }
-.margin-vertical-24px{
+
+.margin-vertical-24px {
     margin-right: 24px;
     margin-left: 24px;
 }
 
 /* PADDINGS */
 
-.padding-left-2px{
+.padding-left-2px {
     padding-left: 2px;
 }
-.padding-left-4px{
+
+.padding-left-4px {
     padding-left: 4px;
 }
-.padding-left-8px{
+
+.padding-left-8px {
     padding-left: 8px;
 }
-.padding-left-16px{
+
+.padding-left-16px {
     padding-left: 16px;
 }
-.padding-left-24px{
+
+.padding-left-24px {
     padding-left: 24px;
 }
 
 
-.padding-right-2px{
+.padding-right-2px {
     padding-right: 2px;
 }
-.padding-right-4px{
+
+.padding-right-4px {
     padding-right: 4px;
 }
-.padding-right-8px{
+
+.padding-right-8px {
     padding-right: 8px;
 }
-.padding-right-16px{
+
+.padding-right-16px {
     padding-right: 16px;
 }
-.padding-right-24px{
+
+.padding-right-24px {
     padding-right: 24px;
 }
 
 
-.padding-top-2px{
+.padding-top-2px {
     padding-top: 2px;
 }
-.padding-top-4px{
+
+.padding-top-4px {
     padding-top: 4px;
 }
-.padding-top-8px{
+
+.padding-top-8px {
     padding-top: 8px;
 }
-.padding-top-16px{
+
+.padding-top-16px {
     padding-top: 16px;
 }
-.padding-top-24px{
+
+.padding-top-24px {
     padding-top: 24px;
 }
 
 
-.padding-bottom-2px{
+.padding-bottom-2px {
     padding-bottom: 2px;
 }
-.padding-bottom-4px{
+
+.padding-bottom-4px {
     padding-bottom: 4px;
 }
-.padding-bottom-8px{
+
+.padding-bottom-8px {
     padding-bottom: 8px;
 }
-.padding-bottom-16px{
+
+.padding-bottom-16px {
     padding-bottom: 16px;
 }
-.padding-bottom-24px{
+
+.padding-bottom-24px {
     padding-bottom: 24px;
 }
 
+.padding-bottom-48px {
+    padding-bottom: 48px;
+}
 
-.padding-horizontal-2px{
+.padding-horizontal-2px {
     padding-bottom: 2px;
     padding-top: 2px;
 }
-.padding-horizontal-4px{
+
+.padding-horizontal-4px {
     padding-bottom: 4px;
     padding-top: 4px;
 }
-.padding-horizontal-8px{
+
+.padding-horizontal-8px {
     padding-bottom: 8px;
     padding-top: 8px;
 }
-.padding-horizontal-16px{
+
+.padding-horizontal-16px {
     padding-bottom: 16px;
     padding-top: 16px;
 }
-.padding-horizontal-24px{
+
+.padding-horizontal-24px {
     padding-bottom: 24px;
     padding-top: 24px;
 }
 
 
-.padding-vertical-2px{
+.padding-vertical-2px {
     padding-right: 2px;
     padding-left: 2px;
 }
-.padding-vertical-4px{
+
+.padding-vertical-4px {
     padding-right: 4px;
     padding-left: 4px;
 }
-.padding-vertical-8px{
+
+.padding-vertical-8px {
     padding-right: 8px;
     padding-left: 8px;
 }
-.padding-vertical-16px{
+
+.padding-vertical-16px {
     padding-right: 16px;
     padding-left: 16px;
 }
-.padding-vertical-24px{
+
+.padding-vertical-24px {
     padding-right: 24px;
     padding-left: 24px;
 }
-.padding-vertical-48px{
+
+.padding-vertical-48px {
     padding-right: 48px;
     padding-left: 48px;
 }
